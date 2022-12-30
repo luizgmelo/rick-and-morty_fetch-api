@@ -1,5 +1,10 @@
 * {
     margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
     padding: 10px;
 }
 
@@ -9,14 +14,27 @@ body {
     align-items: center;
 }
 
+div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    transition: transform 0.5s ;
+}
+
+div:hover {
+    transform: scale(1.05);
+}
+
 button {
     margin-bottom: 10px;
+    padding: 10px;
 }
 
 .name {
-    width: 300px;
-    background-color: lightgray;
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
     text-align: center;
-    border: 1px solid black;
-    border-bottom: none;
+    padding: 10px;
+
 }

@@ -9,7 +9,15 @@ async function showData() {
         const promise = fetch('https://rickandmortyapi.com/api/character');
         const response = await promise;
         const data = await response.json();
-        return data.results.map(object => body.innerHTML += `<p class='name'>${object['name']}</p>`);
+        return data.results.map(object => {
+            body.innerHTML += `
+            <div>
+                <img src='${object['image']}'>
+                <p class='name'>${object['name']}</p>
+            </div>
+            `
+            console.log(object)
+        });
     }
 
 }
